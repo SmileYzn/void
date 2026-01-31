@@ -72,7 +72,7 @@ sudo xbps-install -Syu libreoffice libreoffice-i18n-pt-BR
 sudo xbps-install -Syu gstreamer1 gst-libav gst-plugins-bad1 gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1
 
 # Extras
-sudo xbps-install -Syu catfish dconf-editor gcolor3 gnome-online-accounts gparted gthumb lightdm-gtk-greeter-settings mate-calc mugshot orage parole peek seahorse simple-scan zeitgeist
+sudo xbps-install -Syu catfish dconf-editor gcolor3 gnome-online-accounts gparted gthumb lightdm-gtk-greeter-settings mate-calc mugshot orage parole peek seahorse simple-scan xarchiver zeitgeist
 
 # Bluetoth, CUPS
 sudo xbps-install -Syu blueman bluez cups libspa-bluetooth

@@ -20,7 +20,11 @@ sudo xbps-install -Syu xbps
 
 # Atualizar Sistema
 sudo xbps-install -Syu
+
+# Atualizar o gerenciador de pacotes
 sudo xbps-install -u xbps
+
+# Buscar novas atualizações
 sudo xbps-install -Syu
 
 # Habilitar nonfree
@@ -30,7 +34,7 @@ sudo xbps-install -Syu void-repo-nonfree
 sudo xbps-install -Syu 7zip 7zip-unrar alsa-firmware alsa-utils bash-completion blueman fastfetch ffmpegthumbnailer git man nano pipewire power-profiles-daemon powertop system-config-printer unzip unrar xz zip
 
 # Adwaita
-sudo xbps-install adwaita-fonts adwaita-icon-theme
+sudo xbps-install -Syu adwaita-fonts adwaita-icon-theme
 
 # Fontes Adobe
 sudo xbps-install -Syu font-adobe-source-code-pro font-adobe-source-serif-pro

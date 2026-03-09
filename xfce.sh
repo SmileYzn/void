@@ -69,14 +69,11 @@ sudo xbps-install -Syu thunar-archive-plugin thunar-media-tags-plugin thunar-vol
 # Firefox
 sudo xbps-install -Syu firefox firefox-i18n-pt-BR
 
-# Libreoffice
-sudo xbps-install -Syu libreoffice libreoffice-i18n-pt-BR
-
 # GStreamers
 sudo xbps-install -Syu gstreamer1 gst-libav gst-plugins-bad1 gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1
 
 # Extras
-sudo xbps-install -Syu catfish dconf-editor gcolor3 gnome-online-accounts gparted gthumb lightdm-gtk-greeter-settings mate-calc mugshot orage parole peek seahorse simple-scan xarchiver zeitgeist
+sudo xbps-install -Syu catfish dconf-editor gcolor3 gparted gthumb lightdm-gtk-greeter-settings mate-calc mugshot orage parole peek seahorse simple-scan xarchiver zeitgeist
 
 # Bluetoth, CUPS
 sudo xbps-install -Syu blueman bluez cups libspa-bluetooth
@@ -87,7 +84,10 @@ sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
 sudo usermod -aG bluetooth $USER
 
-# Habilitar TRIM via discard no /etc/fstab
+# Habilitar TRIM semanalmente
+echo "#!/bin/sh" | sudo tee -a "/etc/cron.weekly/fstrim"
+echo "fstrim /" | sudo tee -a "/etc/cron.weekly/fstrim"
+
 #sudo sed -i '/^[^#]*\/ /s/\(defaults\)/\1,discard/' /etc/fstab
 
 # Limpar dependências

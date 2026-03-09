@@ -85,10 +85,8 @@ sudo ln -s /etc/sv/bluetoothd /var/service/
 sudo usermod -aG bluetooth $USER
 
 # Habilitar TRIM semanalmente
-echo '#!/bin/sh' | sudo tee -a '/etc/cron.weekly/fstrim'
-echo 'fstrim /' | sudo tee -a '/etc/cron.weekly/fstrim'
-
-#sudo sed -i '/^[^#]*\/ /s/\(defaults\)/\1,discard/' /etc/fstab
+sudo mkdir -p /etc/cron.weekly
+sudo printf '#!/bin/sh\n\nfstrim /' >> filename.txt
 
 # Limpar dependências
 sudo xbps-remove -foy

@@ -86,7 +86,7 @@ sudo usermod -aG bluetooth $USER
 
 # Habilitar TRIM semanalmente
 sudo mkdir -p /etc/cron.weekly
-sudo printf '#!/bin/sh\n\nfstrim /' >> filename.txt
+sudo printf '#!/bin/sh\n\nfstrim /' >> /etc/cron.weekly/fstrim
 
 # Limpar dependências
 sudo xbps-remove -foy

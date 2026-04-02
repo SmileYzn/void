@@ -61,7 +61,7 @@ sudo xbps-install -Syu numlockx xiccd xorg-apps
 sudo xbps-install -Syu cifs-utils ntfs-3g exfat-utils gvfs gvfs-afc gvfs-afp gvfs-cdda gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-smb
 
 # XFCE4
-sudo xbps-install -Syu xfce4-plugins xfce4-alsa-plugin xfce4-docklike-plugin xfce4-eyes-plugin xfce4-genmon-plugin xfce4-panel-profiles
+sudo xbps-install -Syu xfce4-plugins xfce4-alsa-plugin xfce4-docklike-plugin xfce4-eyes-plugin xfce4-genmon-plugin xfce4-panel-profiles xfce4-screenshooter
 
 # Thunar
 sudo xbps-install -Syu thunar-archive-plugin thunar-media-tags-plugin thunar-volman
@@ -73,7 +73,7 @@ sudo xbps-install -Syu firefox firefox-i18n-pt-BR
 sudo xbps-install -Syu gstreamer1 gst-libav gst-plugins-bad1 gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1
 
 # Extras
-sudo xbps-install -Syu catfish dconf-editor gcolor3 gparted gthumb lightdm-gtk-greeter-settings mate-calc mugshot orage parole peek seahorse simple-scan xarchiver zeitgeist
+sudo xbps-install -Syu catfish dconf-editor galculator gcolor3 gparted gthumb lightdm-gtk-greeter-settings mugshot orage parole peek seahorse simple-scan xarchiver zeitgeist
 
 # Bluetoth, CUPS
 sudo xbps-install -Syu blueman bluez cups libspa-bluetooth

@@ -61,7 +61,7 @@ sudo xbps-install -Syu numlockx xiccd xorg-apps
 sudo xbps-install -Syu cifs-utils ntfs-3g exfat-utils gvfs gvfs-afc gvfs-afp gvfs-cdda gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-smb
 
 # XFCE4
-sudo xbps-install -Syu xfce4-appfinder xfce4-plugins xfce4-alsa-plugin xfce4-docklike-plugin xfce4-eyes-plugin xfce4-genmon-plugin xfce4-panel-profiles xfce4-pulseaudio-plugin xfce4-screenshooter
+sudo xbps-install -Syu xfce4-plugins xfce4-alsa-plugin xfce4-docklike-plugin xfce4-eyes-plugin xfce4-genmon-plugin xfce4-panel-profiles xfce4-pulseaudio-plugin xfce4-screenshooter
 
 # Thunar
 sudo xbps-install -Syu thunar-archive-plugin thunar-media-tags-plugin thunar-volman

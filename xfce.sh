@@ -31,7 +31,7 @@ sudo xbps-install -Syu
 sudo xbps-install -Syu void-repo-nonfree
 
 # Pacotes base
-sudo xbps-install -Syu 7zip 7zip-unrar alsa-firmware alsa-utils bash-completion blueman fastfetch ffmpegthumbnailer git man nano pipewire power-profiles-daemon powertop system-config-printer unzip unrar xz zip
+sudo xbps-install -Syu 7zip 7zip-unrar alsa-firmware alsa-utils bash-completion blueman fastfetch ffmpeg ffmpegthumbnailer git man nano pipewire power-profiles-daemon powertop system-config-printer unzip unrar xz zip
 
 # Adwaita
 sudo xbps-install -Syu adwaita-fonts adwaita-icon-theme

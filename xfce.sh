@@ -47,8 +47,8 @@ man \
 nano \
 numlockx \
 pipewire \
-power-profiles-daemon \
-powertop \
+tlp \
+tlp-pd \
 unzip \
 unrar \
 xiccd \

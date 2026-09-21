@@ -5,7 +5,7 @@ clear
 
 # Verificar acesso root
 if [[ $EUID -eq 0 ]]; then
-    echo -e "Esse script NÃO deve ser executado como ${USER}"
+    echo -e "Esse script NÃO deve ser executado como root"
     exit
 fi
 
@@ -27,6 +27,9 @@ sudo xbps-install -Syu
 # Habilitar nonfree
 sudo xbps-install -Syu void-repo-nonfree
 
+# Atualizar Sistema
+sudo xbps-install -Syu
+
 # Pacotes base
 sudo xbps-install -Syu \
 7zip \
@@ -46,7 +49,6 @@ numlockx \
 pipewire \
 power-profiles-daemon \
 powertop \
-system-config-printer \
 unzip \
 unrar \
 xiccd \
@@ -127,13 +129,10 @@ gst-plugins-ugly1
 
 # Extras
 sudo xbps-install -Syu \
-catfish \
-dconf-editor \
 firefox \
 firefox-i18n-pt-BR \
 galculator \
 gcolor3 \
-gparted \
 gthumb \
 lightdm-gtk-greeter-settings \
 mugshot \
@@ -141,14 +140,13 @@ orage \
 parole \
 peek \
 seahorse \
-simple-scan \
 xarchiver
 
 # Habilitar Bluetoth
 sudo rfkill unblock bluetooth
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
-sudo usermod -aG bluetooth $USER
+sudo usermod -aG bluetooth $(whoami)
 
 # Habilitar TRIM semanalmente
 sudo mkdir -p /etc/cron.weekly

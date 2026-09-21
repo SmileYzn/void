@@ -153,6 +153,10 @@ sudo mkdir -p /etc/cron.weekly
 sudo printf '#!/bin/sh\n\nfstrim /' >> /etc/cron.weekly/fstrim
 sudo chmod u+x /etc/cron.weekly/fstrim
 
+# TLP (Power Saving Profiles)
+sudo ln -s /etc/sv/tlp /var/service
+sudo ln -s /etc/sv/tlp-pd /var/service
+
 # Limpar dependências
 sudo xbps-remove -foy
 

@@ -51,6 +51,7 @@ tlp \
 tlp-pd \
 unzip \
 unrar \
+wget \
 xiccd \
 xorg-apps \
 xz \

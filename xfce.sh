@@ -10,7 +10,7 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # Abrir pasta do usuário
-cd /home/$(whoami)
+cd "$HOME" || exit
 
 # Atualizar XBPS
 sudo xbps-install -Syu xbps

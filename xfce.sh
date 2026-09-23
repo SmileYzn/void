@@ -12,22 +12,9 @@ fi
 # Abrir pasta do usuário
 cd "$HOME" || exit
 
-# Atualizar XBPS
+# Atualizar XBPS, aadicionar o repositório non-free e atualizar
 sudo xbps-install -Syu xbps
-
-# Atualizar Sistema
-sudo xbps-install -Syu
-
-# Atualizar o gerenciador de pacotes
-sudo xbps-install -u xbps
-
-# Buscar novas atualizações
-sudo xbps-install -Syu
-
-# Habilitar nonfree
-sudo xbps-install -Syu void-repo-nonfree
-
-# Atualizar Sistema
+sudo xbps-install -Sy void-repo-nonfree
 sudo xbps-install -Syu
 
 # Pacotes base

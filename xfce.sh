@@ -40,6 +40,7 @@ tlp-pd \
 unzip \
 unrar \
 wget \
+wireplumber \
 xiccd \
 xorg-apps \
 xz \
@@ -156,7 +157,7 @@ sudo groupadd -r autologin
 sudo gpasswd autologin -a $(whoami)
 
 # Abrir pasta do usuário
-cd /home/$(whoami)
+cd "$HOME"
 
 # Criar pastas padrão
 xdg-user-dirs-update
@@ -179,7 +180,7 @@ xdg-user-dirs-update --force --set VIDEOS /home/$(whoami)/Vídeos
 xdg-user-dirs-update
 
 # Remover pastas antigas
-rm -rf Documents Music Pictures Projects Public Templates Videos Projects
+rm -rf Documents Music Pictures Projects Public Templates Videos
 
 # Limpar histórico
 history -c && > ~/.bash_history

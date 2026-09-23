@@ -136,7 +136,7 @@ xarchiver
 sudo rfkill unblock bluetooth
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
-sudo usermod -aG bluetooth $(whoami)
+sudo usermod -aG bluetooth "$USER"
 
 # Habilitar TRIM semanalmente
 sudo mkdir -p /etc/cron.weekly
@@ -144,8 +144,8 @@ sudo printf '#!/bin/sh\n\nfstrim /' >> /etc/cron.weekly/fstrim
 sudo chmod u+x /etc/cron.weekly/fstrim
 
 # TLP (Power Saving Profiles)
-sudo ln -s /etc/sv/tlp /var/service
-sudo ln -s /etc/sv/tlp-pd /var/service
+sudo ln -sf /etc/sv/tlp /var/service
+sudo ln -sf /etc/sv/tlp-pd /var/service
 
 # Limpar dependências
 sudo xbps-remove -foy
@@ -154,7 +154,7 @@ sudo xbps-remove -foy
 sudo groupadd -r autologin
 
 # Adicionar o usuário ao grupo
-sudo gpasswd autologin -a $(whoami)
+sudo gpasswd autologin -a "$USER"
 
 # Abrir pasta do usuário
 cd "$HOME"
@@ -166,15 +166,15 @@ xdg-user-dirs-update
 mkdir Desktop Documentos Downloads Imagens Modelos Músicas Projetos Rede Vídeos
 
 # Alterar pastas
-xdg-user-dirs-update --force --set DESKTOP /home/$(whoami)/Desktop
-xdg-user-dirs-update --force --set DOCUMENTS /home/$(whoami)/Documentos
-xdg-user-dirs-update --force --set DOWNLOAD /home/$(whoami)/Downloads
-xdg-user-dirs-update --force --set PICTURES /home/$(whoami)/Imagens
-xdg-user-dirs-update --force --set TEMPLATES /home/$(whoami)/Modelos
-xdg-user-dirs-update --force --set MUSIC /home/$(whoami)/Músicas
-xdg-user-dirs-update --force --set PROJECTS /home/$(whoami)/Projetos
-xdg-user-dirs-update --force --set PUBLICSHARE /home/$(whoami)/Rede
-xdg-user-dirs-update --force --set VIDEOS /home/$(whoami)/Vídeos
+xdg-user-dirs-update --force --set DESKTOP "$HOME/Desktop"
+xdg-user-dirs-update --force --set DOCUMENTS "$HOME/Documentos"
+xdg-user-dirs-update --force --set DOWNLOAD "$HOME/Downloads"
+xdg-user-dirs-update --force --set PICTURES "$HOME/Imagens"
+xdg-user-dirs-update --force --set TEMPLATES "$HOME/Modelos"
+xdg-user-dirs-update --force --set MUSIC "$HOME/Músicas"
+xdg-user-dirs-update --force --set PROJECTS "$HOME/Projetos"
+xdg-user-dirs-update --force --set PUBLICSHARE "$HOME/Rede"
+xdg-user-dirs-update --force --set VIDEOS "$HOME/Vídeos"
 
 # Atualizar pastas padrão
 xdg-user-dirs-update

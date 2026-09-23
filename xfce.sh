@@ -43,6 +43,7 @@ fastfetch \
 ffmpeg \
 ffmpegthumbnailer \
 git \
+libspa-bluetooth \
 man \
 nano \
 numlockx \
